@@ -10,3 +10,4 @@ cover-package={{{ pkg_ns }}}.{{{ pkg_project }}}
 cover-min-percentage=100
 cover-erase=1
 {{% endif %}}
+

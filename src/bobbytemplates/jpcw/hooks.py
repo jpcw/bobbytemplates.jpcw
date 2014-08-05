@@ -52,5 +52,4 @@ def basic_namespace_pre_render(configurator):
 def basic_namespace_post_render(configurator):
     """Nothing yet."""
 
-
 # vim:set et sts=4 ts=4 tw=80:
