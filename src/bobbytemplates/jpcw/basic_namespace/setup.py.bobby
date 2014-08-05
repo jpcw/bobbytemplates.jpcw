@@ -39,39 +39,39 @@ setup(name='{{{ pkg_ns }}}.{{{ pkg_project }}}',
 {{% if pkg_license == 'GPL' %}}
                    "License :: OSI Approved :: GNU General Public License (GPL)"],
 {{% endif %}}
-      keywords='{{{ pkg_keywords }}}',
-      author='{{{ pkg_author_name }}}',
-      author_email='{{{ pkg_author_email }}}',
-      url='{{{ pkg_url }}}',
-      license='{{{ pkg_license }}}',
-      packages=find_packages('src'),
-      package_dir={'': 'src'},
-      namespace_packages=['{{{ pkg_ns }}}'],
+      keywords="{{{ pkg_keywords }}}",
+      author="{{{ pkg_author_name }}}",
+      author_email="{{{ pkg_author_email }}}",
+      url="{{{ pkg_url }}}",
+      license="{{{ pkg_license }}}",
+      packages=find_packages("src"),
+      package_dir={"": "src"},
+      namespace_packages=["{{{ pkg_ns }}}"],
       include_package_data=True,
       zip_safe={{{ pkg_zipsafe }}},
       install_requires=install_requires,
       extras_require={
 {{% if pkg_nose or pkg_coverage %}}
-          'test': [
+          "test": [
 {{% if pkg_nose %}}
-              'nose',
+              "nose",
 {{% endif %}}
-              'flake8<2.0',
+              "flake8<2.0",
 {{% endif %}}
 {{% if pkg_coverage %}}
-              'coverage<3.6dev',
+              "coverage<3.6dev",
 {{% endif %}}
 {{% if pkg_nose or pkg_coverage %}}
           ],
 {{% endif %}}
-          'development': [
+          "development": [
 {{% if pkg_zest_releaser %}}
-              'zest.releaser',
+              "zest.releaser",
 {{% endif %}}
 {{% if pkg_sphinx %}}
-              'Sphinx',
+              "Sphinx",
 {{% if pkg_sphinx_contrib_gen_node %}}
-              'sphinxcontrib-gen_node',
+              "sphinxcontrib-gen_node",
 {{% endif %}}
 {{% endif %}}
           ],
